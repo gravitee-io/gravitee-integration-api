@@ -1,0 +1,5 @@
+= Gravitee.io - Integration API
+
+== Description
+
+The integration API contains the interfaces to implement to create an integration provider plugin for Gravitee.io APIM.
