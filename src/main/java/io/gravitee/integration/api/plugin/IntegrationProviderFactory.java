@@ -16,10 +16,19 @@
 
 package io.gravitee.integration.api.plugin;
 
+import org.springframework.core.env.Environment;
+
 /**
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
 public interface IntegrationProviderFactory<I extends IntegrationProvider> {
-    I createIntegrationProvider(String id, String configuration);
+    /**
+     * Create an integration provider using Spring Environment and a Prefix to load the configuration
+     * @param id The id of the integration provider.
+     * @param environment The Spring Environment where to load the configuration.
+     * @param prefix The prefix to use to load the configuration.
+     * @return The created integration provider.
+     */
+    I createIntegrationProvider(String id, Environment environment, String prefix);
 }
