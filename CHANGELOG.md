@@ -1,3 +1,15 @@
+# [1.0.0-alpha.2](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.1...1.0.0-alpha.2) (2024-03-25)
+
+
+### Bug Fixes
+
+* remove AbstractIntegrationProviderConfiguration ([a7d3168](https://github.com/gravitee-io/gravitee-integration-api/commit/a7d3168650e54dd7126a39faf17e75b7176c5451))
+
+
+### Features
+
+* change IntegrationProviderFactory signature to rely on Spring env ([2f6f9a3](https://github.com/gravitee-io/gravitee-integration-api/commit/2f6f9a343be796cfa434ba15f6280da81d2382e9))
+
 # 1.0.0-alpha.1 (2024-03-18)
 
 
