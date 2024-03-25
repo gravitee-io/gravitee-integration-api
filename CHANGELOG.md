@@ -1,3 +1,10 @@
+# [1.0.0-alpha.3](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.2...1.0.0-alpha.3) (2024-03-25)
+
+
+### Features
+
+* remove environmentId in HelloPayload ([45f948c](https://github.com/gravitee-io/gravitee-integration-api/commit/45f948c91b970b0b5b9aea71a9e913821ebac0ea))
+
 # [1.0.0-alpha.2](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.1...1.0.0-alpha.2) (2024-03-25)
 
 
