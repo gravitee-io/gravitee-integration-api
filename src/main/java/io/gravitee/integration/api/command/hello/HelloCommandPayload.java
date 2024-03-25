@@ -33,5 +33,4 @@ import lombok.experimental.SuperBuilder;
 public class HelloCommandPayload extends io.gravitee.exchange.api.command.hello.HelloCommandPayload {
 
     private String provider;
-    private String environmentId;
 }
