@@ -18,11 +18,14 @@ package io.gravitee.integration.api.command.list;
 import io.gravitee.exchange.api.command.CommandStatus;
 import io.gravitee.integration.api.command.IntegrationCommandType;
 import io.gravitee.integration.api.command.IntegrationReply;
+import lombok.EqualsAndHashCode;
 
 /**
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
+
+@EqualsAndHashCode(callSuper = true)
 public class ListReply extends IntegrationReply<ListReplyPayload> {
 
     public ListReply() {

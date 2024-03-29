@@ -19,9 +19,12 @@ package io.gravitee.integration.api.command.fetch;
 import io.gravitee.exchange.api.command.Payload;
 import io.gravitee.integration.api.model.Asset;
 import java.util.List;
+import lombok.Builder;
+import lombok.Singular;
 
 /**
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
-public record FetchCommandPayload(List<Asset> assets) implements Payload {}
+@Builder
+public record FetchCommandPayload(@Singular List<Asset> assets) implements Payload {}

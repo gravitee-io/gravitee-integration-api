@@ -18,11 +18,13 @@ package io.gravitee.integration.api.command.subscribe;
 import io.gravitee.exchange.api.command.CommandStatus;
 import io.gravitee.integration.api.command.IntegrationCommandType;
 import io.gravitee.integration.api.command.IntegrationReply;
+import lombok.EqualsAndHashCode;
 
 /**
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
+@EqualsAndHashCode(callSuper = true)
 public class SubscribeReply extends IntegrationReply<SubscribeReplyPayload> {
 
     public SubscribeReply() {

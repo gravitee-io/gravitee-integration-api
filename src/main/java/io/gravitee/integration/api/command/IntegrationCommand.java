@@ -18,12 +18,14 @@ package io.gravitee.integration.api.command;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.gravitee.exchange.api.command.Command;
 import io.gravitee.exchange.api.command.Payload;
+import lombok.EqualsAndHashCode;
 
 /**
  * @author Guillaume LAMIRAND (guillaume.lamirand at graviteesource.com)
  * @author GraviteeSource Team
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@EqualsAndHashCode(callSuper = true)
 public abstract class IntegrationCommand<P extends Payload> extends Command<P> {
 
     protected IntegrationCommand(final IntegrationCommandType type) {
