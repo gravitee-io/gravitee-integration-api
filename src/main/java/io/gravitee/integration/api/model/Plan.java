@@ -16,8 +16,11 @@
 
 package io.gravitee.integration.api.model;
 
+import lombok.Builder;
+
 /**
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
-public record Plan(String id, PlanSecurityType planSecurityType) {}
+@Builder
+public record Plan(String id, String name, PlanSecurityType planSecurityType) {}
