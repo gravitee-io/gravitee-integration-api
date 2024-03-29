@@ -17,13 +17,10 @@ package io.gravitee.integration.api.command;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import io.gravitee.exchange.api.command.CommandStatus;
 import io.gravitee.exchange.api.command.Payload;
 import io.gravitee.exchange.api.command.Reply;
-import io.gravitee.integration.api.command.fetch.FetchReply;
-import io.gravitee.integration.api.command.list.ListReply;
+import lombok.EqualsAndHashCode;
 
 /**
  * @author Guillaume LAMIRAND (guillaume.lamirand at graviteesource.com)
@@ -31,6 +28,7 @@ import io.gravitee.integration.api.command.list.ListReply;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
+@EqualsAndHashCode(callSuper = true)
 public abstract class IntegrationReply<P extends Payload> extends Reply<P> {
 
     protected IntegrationReply(final IntegrationCommandType type) {

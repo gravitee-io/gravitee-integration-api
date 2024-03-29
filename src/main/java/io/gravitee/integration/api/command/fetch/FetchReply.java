@@ -19,15 +19,15 @@ package io.gravitee.integration.api.command.fetch;
 import io.gravitee.exchange.api.command.CommandStatus;
 import io.gravitee.integration.api.command.IntegrationCommandType;
 import io.gravitee.integration.api.command.IntegrationReply;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
 
 /**
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
-@Getter
-@Setter
+@Builder
+@EqualsAndHashCode(callSuper = true)
 public class FetchReply extends IntegrationReply<FetchReplyPayload> {
 
     public FetchReply() {

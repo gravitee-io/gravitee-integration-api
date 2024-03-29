@@ -18,12 +18,13 @@ package io.gravitee.integration.api.command.fetch;
 
 import io.gravitee.integration.api.command.IntegrationCommand;
 import io.gravitee.integration.api.command.IntegrationCommandType;
-import lombok.experimental.SuperBuilder;
+import lombok.EqualsAndHashCode;
 
 /**
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
+@EqualsAndHashCode(callSuper = true)
 public class FetchCommand extends IntegrationCommand<FetchCommandPayload> {
 
     public FetchCommand() {
