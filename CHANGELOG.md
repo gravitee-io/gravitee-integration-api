@@ -1,3 +1,15 @@
+# [1.0.0-alpha.4](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.3...1.0.0-alpha.4) (2024-04-03)
+
+
+### Bug Fixes
+
+* define lombok annotation to generate builder and equals methods ([36e275f](https://github.com/gravitee-io/gravitee-integration-api/commit/36e275ffd3cc83589bd21679c5c601c539d4fc0a))
+
+
+### Features
+
+* add name in Plan for import ([0de61cd](https://github.com/gravitee-io/gravitee-integration-api/commit/0de61cd45ee905f9146112314b9ab26539fcd62e))
+
 # [1.0.0-alpha.3](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.2...1.0.0-alpha.3) (2024-03-25)
 
 
