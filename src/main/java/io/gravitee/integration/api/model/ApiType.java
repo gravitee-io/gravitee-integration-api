@@ -14,17 +14,13 @@
  * limitations under the License.
  */
 
-package io.gravitee.integration.api.command.fetch;
-
-import io.gravitee.exchange.api.command.Payload;
-import io.gravitee.integration.api.model.Asset;
-import java.util.List;
-import lombok.Builder;
-import lombok.Singular;
+package io.gravitee.integration.api.model;
 
 /**
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
-@Builder
-public record FetchCommandPayload(@Singular List<Asset> assets) implements Payload {}
+public enum ApiType {
+    PROXY,
+    MESSAGE,
+}

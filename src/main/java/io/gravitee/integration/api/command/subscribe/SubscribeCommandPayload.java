@@ -17,11 +17,10 @@
 package io.gravitee.integration.api.command.subscribe;
 
 import io.gravitee.exchange.api.command.Payload;
-import io.gravitee.integration.api.model.Asset;
 import io.gravitee.integration.api.model.Subscription;
 
 /**
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
-public record SubscribeCommandPayload(Asset asset, Subscription subscription) implements Payload {}
+public record SubscribeCommandPayload(String apiId, Subscription subscription) implements Payload {}

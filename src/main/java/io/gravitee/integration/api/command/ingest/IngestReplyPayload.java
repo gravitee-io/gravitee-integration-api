@@ -13,21 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.gravitee.integration.api.command.list;
 
-import io.gravitee.integration.api.command.IntegrationCommand;
-import io.gravitee.integration.api.command.IntegrationCommandType;
-import lombok.EqualsAndHashCode;
+package io.gravitee.integration.api.command.ingest;
+
+import io.gravitee.exchange.api.command.Payload;
+import io.gravitee.integration.api.model.Api;
+import java.util.List;
+import lombok.Builder;
+import lombok.Singular;
 
 /**
- * @author Remi Baptiste (remi.baptiste at graviteesource.com)
+ * @author Guillaume LAMIRAND (guillaume.lamirand at graviteesource.com)
  * @author GraviteeSource Team
  */
-@EqualsAndHashCode(callSuper = true)
-public class ListCommand extends IntegrationCommand<ListCommandPayload> {
-
-    public ListCommand() {
-        super(IntegrationCommandType.LIST);
-        this.payload = new ListCommandPayload();
-    }
-}
+@Builder
+public record IngestReplyPayload(@Singular("api") List<Api> apis) implements Payload {}

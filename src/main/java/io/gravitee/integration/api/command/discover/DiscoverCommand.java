@@ -13,18 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package io.gravitee.integration.api.command.discover;
 
-package io.gravitee.integration.api.command.fetch;
-
-import io.gravitee.exchange.api.command.Payload;
-import io.gravitee.integration.api.model.Asset;
-import java.util.List;
-import lombok.Builder;
-import lombok.Singular;
+import io.gravitee.integration.api.command.IntegrationCommand;
+import io.gravitee.integration.api.command.IntegrationCommandType;
+import lombok.EqualsAndHashCode;
 
 /**
- * @author Guillaume LAMIRAND (guillaume.lamirand at graviteesource.com)
+ * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
-@Builder
-public record FetchReplyPayload(@Singular List<Asset> assets) implements Payload {}
+@EqualsAndHashCode(callSuper = true)
+public class DiscoverCommand extends IntegrationCommand<DiscoverCommandPayload> {
+
+    public DiscoverCommand() {
+        super(IntegrationCommandType.LIST);
+        this.payload = new DiscoverCommandPayload();
+    }
+}

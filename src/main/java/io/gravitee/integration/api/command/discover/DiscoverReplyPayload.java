@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.gravitee.integration.api.command.list;
+package io.gravitee.integration.api.command.discover;
 
 import io.gravitee.exchange.api.command.Payload;
-import io.gravitee.integration.api.model.Asset;
+import io.gravitee.integration.api.model.Api;
 import java.util.List;
 
 /**
  * @author Guillaume LAMIRAND (guillaume.lamirand at graviteesource.com)
  * @author GraviteeSource Team
  */
-public record ListReplyPayload(List<Asset> assets) implements Payload {}
+public record DiscoverReplyPayload(List<Api> apis) implements Payload {}

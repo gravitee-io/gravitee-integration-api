@@ -14,13 +14,16 @@
  * limitations under the License.
  */
 
-package io.gravitee.integration.api.model;
+package io.gravitee.integration.api.command.ingest;
+
+import io.gravitee.exchange.api.command.Payload;
+import io.gravitee.integration.api.model.Api;
+import java.util.List;
+import lombok.Builder;
 
 /**
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
-public enum AssetType {
-    OPENAPI,
-    ASYNCAPI,
-}
+@Builder
+public record IngestCommandPayload(List<Api> apis) implements Payload {}

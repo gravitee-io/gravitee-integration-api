@@ -13,12 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.gravitee.integration.api.command.list;
 
-import io.gravitee.exchange.api.command.Payload;
+package io.gravitee.integration.api.command.ingest;
+
+import io.gravitee.integration.api.command.IntegrationCommand;
+import io.gravitee.integration.api.command.IntegrationCommandType;
+import lombok.EqualsAndHashCode;
 
 /**
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
-public record ListCommandPayload() implements Payload {}
+@EqualsAndHashCode(callSuper = true)
+public class IngestCommand extends IntegrationCommand<IngestCommandPayload> {
+
+    public IngestCommand() {
+        super(IntegrationCommandType.FETCH);
+    }
+
+    public IngestCommand(final IngestCommandPayload ingestCommandPayload) {
+        this();
+        this.payload = ingestCommandPayload;
+    }
+}

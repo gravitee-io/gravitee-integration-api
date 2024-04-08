@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.gravitee.integration.api.command.list;
+package io.gravitee.integration.api.command.discover;
 
 import io.gravitee.exchange.api.command.CommandStatus;
 import io.gravitee.integration.api.command.IntegrationCommandType;
@@ -26,19 +26,19 @@ import lombok.EqualsAndHashCode;
  */
 
 @EqualsAndHashCode(callSuper = true)
-public class ListReply extends IntegrationReply<ListReplyPayload> {
+public class DiscoverReply extends IntegrationReply<DiscoverReplyPayload> {
 
-    public ListReply() {
+    public DiscoverReply() {
         super(IntegrationCommandType.LIST);
     }
 
-    public ListReply(String commandId, String errorDetails) {
+    public DiscoverReply(String commandId, String errorDetails) {
         super(IntegrationCommandType.LIST, commandId, CommandStatus.ERROR);
         this.errorDetails = errorDetails;
     }
 
-    public ListReply(String commandId, ListReplyPayload listReplyPayload) {
+    public DiscoverReply(String commandId, DiscoverReplyPayload discoverReplyPayload) {
         super(IntegrationCommandType.LIST, commandId, CommandStatus.SUCCEEDED);
-        this.payload = listReplyPayload;
+        this.payload = discoverReplyPayload;
     }
 }
