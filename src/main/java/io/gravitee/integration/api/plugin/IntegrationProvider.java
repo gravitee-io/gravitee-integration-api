@@ -19,6 +19,7 @@ package io.gravitee.integration.api.plugin;
 import io.gravitee.common.component.LifecycleComponent;
 import io.gravitee.integration.api.model.Api;
 import io.gravitee.integration.api.model.Subscription;
+import io.gravitee.integration.api.plugin.configuration.IntegrationProviderConfiguration;
 import io.reactivex.rxjava3.core.Flowable;
 import io.reactivex.rxjava3.core.Single;
 import java.util.List;
@@ -28,6 +29,8 @@ import java.util.List;
  * @author GraviteeSource Team
  */
 public interface IntegrationProvider extends LifecycleComponent<IntegrationProvider> {
+    IntegrationProviderConfiguration getConfiguration();
+
     Flowable<Api> discover();
 
     Flowable<Api> ingest(List<Api> apis);
