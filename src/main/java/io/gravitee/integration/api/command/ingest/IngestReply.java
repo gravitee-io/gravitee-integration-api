@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.gravitee.integration.api.command.fetch;
+package io.gravitee.integration.api.command.ingest;
 
 import io.gravitee.exchange.api.command.CommandStatus;
 import io.gravitee.integration.api.command.IntegrationCommandType;
@@ -28,19 +28,19 @@ import lombok.EqualsAndHashCode;
  */
 @Builder
 @EqualsAndHashCode(callSuper = true)
-public class FetchReply extends IntegrationReply<FetchReplyPayload> {
+public class IngestReply extends IntegrationReply<IngestReplyPayload> {
 
-    public FetchReply() {
+    public IngestReply() {
         super(IntegrationCommandType.FETCH);
     }
 
-    public FetchReply(String commandId, String errorDetails) {
+    public IngestReply(String commandId, String errorDetails) {
         super(IntegrationCommandType.FETCH, commandId, CommandStatus.ERROR);
         this.errorDetails = errorDetails;
     }
 
-    public FetchReply(String commandId, FetchReplyPayload fetchReplyPayload) {
+    public IngestReply(String commandId, IngestReplyPayload ingestReplyPayload) {
         super(IntegrationCommandType.FETCH, commandId, CommandStatus.SUCCEEDED);
-        this.payload = fetchReplyPayload;
+        this.payload = ingestReplyPayload;
     }
 }

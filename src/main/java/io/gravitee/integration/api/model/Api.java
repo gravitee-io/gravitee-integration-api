@@ -20,6 +20,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -31,20 +32,19 @@ import lombok.NoArgsConstructor;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-@JsonPropertyOrder({ "id", "name", "version", "description", "host", "path", "type", "pages", "plans" })
+@JsonPropertyOrder({ "id", "name", "version", "description", "connectionDetails", "type", "pages", "plans" })
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public final class Asset implements Serializable {
+public final class Api implements Serializable {
 
     private String id;
     private String name;
     private String version;
     private String description;
-    private String host;
-    private String path;
-    private AssetType type;
+    private Map<String, String> connectionDetails;
+    private ApiType type;
     private List<Page> pages;
     private List<Plan> plans;
 }

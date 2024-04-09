@@ -13,26 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package io.gravitee.integration.api.command.discover;
 
-package io.gravitee.integration.api.command.fetch;
-
-import io.gravitee.integration.api.command.IntegrationCommand;
-import io.gravitee.integration.api.command.IntegrationCommandType;
-import lombok.EqualsAndHashCode;
+import io.gravitee.exchange.api.command.Payload;
 
 /**
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
-@EqualsAndHashCode(callSuper = true)
-public class FetchCommand extends IntegrationCommand<FetchCommandPayload> {
-
-    public FetchCommand() {
-        super(IntegrationCommandType.FETCH);
-    }
-
-    public FetchCommand(final FetchCommandPayload fetchCommandPayload) {
-        this();
-        this.payload = fetchCommandPayload;
-    }
-}
+public record DiscoverCommandPayload() implements Payload {}

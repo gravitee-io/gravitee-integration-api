@@ -18,11 +18,11 @@ package io.gravitee.integration.api.websocket.command;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.gravitee.exchange.api.websocket.command.DefaultExchangeSerDe;
 import io.gravitee.integration.api.command.IntegrationCommandType;
-import io.gravitee.integration.api.command.fetch.FetchCommand;
-import io.gravitee.integration.api.command.fetch.FetchReply;
+import io.gravitee.integration.api.command.discover.DiscoverCommand;
+import io.gravitee.integration.api.command.discover.DiscoverReply;
 import io.gravitee.integration.api.command.hello.HelloCommand;
-import io.gravitee.integration.api.command.list.ListCommand;
-import io.gravitee.integration.api.command.list.ListReply;
+import io.gravitee.integration.api.command.ingest.IngestCommand;
+import io.gravitee.integration.api.command.ingest.IngestReply;
 import io.gravitee.integration.api.command.subscribe.SubscribeCommand;
 import io.gravitee.integration.api.command.subscribe.SubscribeReply;
 import java.util.Map;
@@ -40,17 +40,17 @@ public class IntegrationExchangeSerDe extends DefaultExchangeSerDe {
                 IntegrationCommandType.HELLO.name(),
                 HelloCommand.class,
                 IntegrationCommandType.FETCH.name(),
-                FetchCommand.class,
+                IngestCommand.class,
                 IntegrationCommandType.LIST.name(),
-                ListCommand.class,
+                DiscoverCommand.class,
                 IntegrationCommandType.SUBSCRIBE.name(),
                 SubscribeCommand.class
             ),
             Map.of(
                 IntegrationCommandType.FETCH.name(),
-                FetchReply.class,
+                IngestReply.class,
                 IntegrationCommandType.LIST.name(),
-                ListReply.class,
+                DiscoverReply.class,
                 IntegrationCommandType.SUBSCRIBE.name(),
                 SubscribeReply.class
             )
