@@ -1,3 +1,10 @@
+# [1.0.0-alpha.5](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.4...1.0.0-alpha.5) (2024-04-09)
+
+
+### Features
+
+* rename element to follow naming used in Federation team ([#7](https://github.com/gravitee-io/gravitee-integration-api/issues/7)) ([cdad394](https://github.com/gravitee-io/gravitee-integration-api/commit/cdad394c5339de39d9e588a9bdd31f8d8e96d4cf))
+
 # [1.0.0-alpha.4](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.3...1.0.0-alpha.4) (2024-04-03)
 
 
