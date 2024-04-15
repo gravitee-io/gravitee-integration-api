@@ -1,3 +1,10 @@
+# [1.0.0-alpha.6](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.5...1.0.0-alpha.6) (2024-04-15)
+
+
+### Features
+
+* add Api unique id ([#9](https://github.com/gravitee-io/gravitee-integration-api/issues/9)) ([6c38079](https://github.com/gravitee-io/gravitee-integration-api/commit/6c38079fe2e2b56b22e3f0780f6bd4a22c4cf314))
+
 # [1.0.0-alpha.5](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.4...1.0.0-alpha.5) (2024-04-09)
 
 
