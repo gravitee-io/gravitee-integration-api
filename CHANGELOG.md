@@ -1,3 +1,10 @@
+# [1.0.0-alpha.7](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.6...1.0.0-alpha.7) (2024-04-19)
+
+
+### Features
+
+* add description to Plan ([c229ced](https://github.com/gravitee-io/gravitee-integration-api/commit/c229ced3510c7fb2f26368b8411fd807a98f26e4))
+
 # [1.0.0-alpha.6](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.5...1.0.0-alpha.6) (2024-04-15)
 
 
