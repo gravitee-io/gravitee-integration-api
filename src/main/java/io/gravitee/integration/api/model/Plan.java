@@ -23,4 +23,4 @@ import lombok.Builder;
  * @author GraviteeSource Team
  */
 @Builder
-public record Plan(String id, String name, PlanSecurityType planSecurityType) {}
+public record Plan(String id, String name, String description, PlanSecurityType planSecurityType) {}
