@@ -35,7 +35,7 @@
     <properties>
         <gravitee-bom.version>7.0.14</gravitee-bom.version>
         <gravitee-common.version>4.2.0</gravitee-common.version>
-        <gravitee-exchange.version>1.0.2</gravitee-exchange.version>
+        <gravitee-exchange.version>1.4.2</gravitee-exchange.version>
     </properties>
 
     <dependencyManagement>
