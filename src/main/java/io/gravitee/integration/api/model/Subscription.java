@@ -25,15 +25,11 @@ import lombok.Builder;
  */
 @Builder
 public record Subscription(
-    String graviteeApiId,
-    String graviteeApplicationId,
-    String graviteeUserId,
     String graviteeSubscriptionId,
-    String graviteeEnvironmentId,
-    String graviteeOrganizationId,
-    String reason,
+    String graviteeApplicationName,
     SubscriptionType type,
-
-    String apiKey,
-    Map<String, String> metadata
-) {}
+    Map<String, String> metadata,
+    String apiKey
+) {
+    public static final String METADATA_PLAN_ID = "planId";
+}
