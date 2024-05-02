@@ -1,3 +1,10 @@
+# [1.0.0-alpha.8](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.7...1.0.0-alpha.8) (2024-05-02)
+
+
+### Features
+
+* use gravitee-node Configuration interface ([857f813](https://github.com/gravitee-io/gravitee-integration-api/commit/857f813570bb55c278b6ec9c9b64e88ac9eea4b7))
+
 # [1.0.0-alpha.7](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.6...1.0.0-alpha.7) (2024-04-19)
 
 
