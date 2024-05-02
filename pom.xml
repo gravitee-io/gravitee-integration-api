@@ -35,6 +35,7 @@
     <properties>
         <gravitee-bom.version>7.0.23</gravitee-bom.version>
         <gravitee-common.version>4.2.0</gravitee-common.version>
+        <gravitee-node.version>5.13.0</gravitee-node.version>
         <gravitee-exchange.version>1.4.2</gravitee-exchange.version>
     </properties>
 
@@ -48,10 +49,23 @@
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
+            <dependency>
+                <groupId>io.gravitee.node</groupId>
+                <artifactId>gravitee-node</artifactId>
+                <version>${gravitee-node.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
+        <dependency>
+            <groupId>io.gravitee.node</groupId>
+            <artifactId>gravitee-node-api</artifactId>
+            <version>${gravitee-node.version}</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>io.gravitee.exchange</groupId>
             <artifactId>gravitee-exchange-api</artifactId>
@@ -73,13 +87,6 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Spring dependencies -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
             <scope>provided</scope>
         </dependency>
 
