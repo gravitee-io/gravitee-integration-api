@@ -1,3 +1,10 @@
+# [1.0.0-alpha.9](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.8...1.0.0-alpha.9) (2024-05-06)
+
+
+### Features
+
+* simplify Subscription model ([f3c9351](https://github.com/gravitee-io/gravitee-integration-api/commit/f3c935194be4b711eda2b9da91abfeed86321a6a))
+
 # [1.0.0-alpha.8](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.7...1.0.0-alpha.8) (2024-05-02)
 
 
