@@ -22,6 +22,6 @@ package io.gravitee.integration.api.model;
  */
 public enum PlanSecurityType {
     API_KEY,
-    OAUTH,
+    OAUTH2,
     JWT,
 }
