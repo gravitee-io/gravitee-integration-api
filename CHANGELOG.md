@@ -1,3 +1,10 @@
+# [1.0.0-alpha.10](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.9...1.0.0-alpha.10) (2024-05-14)
+
+
+### Bug Fixes
+
+* rename OAUTH to OAUTH2 to comply with apim ([#13](https://github.com/gravitee-io/gravitee-integration-api/issues/13)) ([120921b](https://github.com/gravitee-io/gravitee-integration-api/commit/120921bbd9ca025795456f10b68d831a14b19c75))
+
 # [1.0.0-alpha.9](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.8...1.0.0-alpha.9) (2024-05-06)
 
 
