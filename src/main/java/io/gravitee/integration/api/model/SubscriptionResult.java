@@ -14,13 +14,10 @@
  * limitations under the License.
  */
 
-package io.gravitee.integration.api.command.subscribe;
+package io.gravitee.integration.api.model;
 
-import io.gravitee.exchange.api.command.Payload;
-import io.gravitee.integration.api.model.SubscriptionResult;
+import java.util.Map;
+import lombok.Builder;
 
-/**
- * @author Remi Baptiste (remi.baptiste at graviteesource.com)
- * @author GraviteeSource Team
- */
-public record SubscribeReplyPayload(SubscriptionResult subscription) implements Payload {}
+@Builder
+public record SubscriptionResult(String graviteeSubscriptionId, Map<String, String> metadata, String apiKey) {}
