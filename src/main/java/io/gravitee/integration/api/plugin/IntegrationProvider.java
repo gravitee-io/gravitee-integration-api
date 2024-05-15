@@ -20,6 +20,7 @@ import io.gravitee.common.component.LifecycleComponent;
 import io.gravitee.integration.api.model.Api;
 import io.gravitee.integration.api.model.Subscription;
 import io.gravitee.integration.api.model.SubscriptionResult;
+import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.core.Flowable;
 import io.reactivex.rxjava3.core.Single;
 import java.util.List;
@@ -34,4 +35,6 @@ public interface IntegrationProvider extends LifecycleComponent<IntegrationProvi
     Flowable<Api> ingest(List<Api> apis);
 
     Single<SubscriptionResult> subscribe(String apiId, Subscription subscription);
+
+    Completable unsubscribe(String apiId, Subscription subscription);
 }

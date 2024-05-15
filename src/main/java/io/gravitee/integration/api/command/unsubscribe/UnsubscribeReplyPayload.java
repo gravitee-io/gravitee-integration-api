@@ -13,17 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.gravitee.integration.api.command;
 
-/**
- * @author Guillaume LAMIRAND (guillaume.lamirand at graviteesource.com)
- * @author GraviteeSource Team
- */
-public enum IntegrationCommandType {
-    FETCH,
-    HELLO,
-    LIST,
-    STOP,
-    SUBSCRIBE,
-    UNSUBSCRIBE,
-}
+package io.gravitee.integration.api.command.unsubscribe;
+
+import io.gravitee.exchange.api.command.Payload;
+
+public record UnsubscribeReplyPayload() implements Payload {}

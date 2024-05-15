@@ -13,17 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.gravitee.integration.api.command;
 
-/**
- * @author Guillaume LAMIRAND (guillaume.lamirand at graviteesource.com)
- * @author GraviteeSource Team
- */
-public enum IntegrationCommandType {
-    FETCH,
-    HELLO,
-    LIST,
-    STOP,
-    SUBSCRIBE,
-    UNSUBSCRIBE,
+package io.gravitee.integration.api.command.unsubscribe;
+
+import io.gravitee.integration.api.command.IntegrationCommand;
+import io.gravitee.integration.api.command.IntegrationCommandType;
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode(callSuper = true)
+public class UnsubscribeCommand extends IntegrationCommand<UnsubscribeCommandPayload> {
+
+    public UnsubscribeCommand() {
+        super(IntegrationCommandType.UNSUBSCRIBE);
+    }
+
+    public UnsubscribeCommand(final UnsubscribeCommandPayload unsubscribeCommandPayload) {
+        this();
+        this.payload = unsubscribeCommandPayload;
+    }
 }
