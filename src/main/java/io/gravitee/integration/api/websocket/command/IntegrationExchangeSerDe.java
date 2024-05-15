@@ -25,6 +25,8 @@ import io.gravitee.integration.api.command.ingest.IngestCommand;
 import io.gravitee.integration.api.command.ingest.IngestReply;
 import io.gravitee.integration.api.command.subscribe.SubscribeCommand;
 import io.gravitee.integration.api.command.subscribe.SubscribeReply;
+import io.gravitee.integration.api.command.unsubscribe.UnsubscribeCommand;
+import io.gravitee.integration.api.command.unsubscribe.UnsubscribeReply;
 import java.util.Map;
 
 /**
@@ -44,7 +46,9 @@ public class IntegrationExchangeSerDe extends DefaultExchangeSerDe {
                 IntegrationCommandType.LIST.name(),
                 DiscoverCommand.class,
                 IntegrationCommandType.SUBSCRIBE.name(),
-                SubscribeCommand.class
+                SubscribeCommand.class,
+                IntegrationCommandType.UNSUBSCRIBE.name(),
+                UnsubscribeCommand.class
             ),
             Map.of(
                 IntegrationCommandType.FETCH.name(),
@@ -52,7 +56,9 @@ public class IntegrationExchangeSerDe extends DefaultExchangeSerDe {
                 IntegrationCommandType.LIST.name(),
                 DiscoverReply.class,
                 IntegrationCommandType.SUBSCRIBE.name(),
-                SubscribeReply.class
+                SubscribeReply.class,
+                IntegrationCommandType.UNSUBSCRIBE.name(),
+                UnsubscribeReply.class
             )
         );
     }
