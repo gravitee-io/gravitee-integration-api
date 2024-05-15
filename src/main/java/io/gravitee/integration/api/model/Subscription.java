@@ -28,8 +28,7 @@ public record Subscription(
     String graviteeSubscriptionId,
     String graviteeApplicationName,
     SubscriptionType type,
-    Map<String, String> metadata,
-    String apiKey
+    Map<String, String> metadata
 ) {
     public static final String METADATA_PLAN_ID = "planId";
 }
