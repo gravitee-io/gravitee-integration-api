@@ -1,3 +1,10 @@
+# [1.0.0-alpha.11](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.10...1.0.0-alpha.11) (2024-05-16)
+
+
+### Bug Fixes
+
+* return a result instead of updated subscription when subscribing ([54ec4d7](https://github.com/gravitee-io/gravitee-integration-api/commit/54ec4d74022411e3e0166bf2fe70f8adaee7fc15))
+
 # [1.0.0-alpha.10](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.9...1.0.0-alpha.10) (2024-05-14)
 
 
