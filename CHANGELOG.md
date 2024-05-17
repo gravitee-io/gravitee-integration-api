@@ -1,3 +1,10 @@
+# [1.0.0-alpha.12](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.11...1.0.0-alpha.12) (2024-05-17)
+
+
+### Features
+
+* add unsubscribe method ([63ba8e8](https://github.com/gravitee-io/gravitee-integration-api/commit/63ba8e800529d61d214a86f7e14214db3b75ce82))
+
 # [1.0.0-alpha.11](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.10...1.0.0-alpha.11) (2024-05-16)
 
 
