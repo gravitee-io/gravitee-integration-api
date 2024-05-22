@@ -16,11 +16,9 @@
 package io.gravitee.integration.api.command.discover;
 
 import io.gravitee.exchange.api.command.Payload;
-import io.gravitee.integration.api.model.Api;
-import java.util.List;
 
 /**
  * @author Guillaume LAMIRAND (guillaume.lamirand at graviteesource.com)
  * @author GraviteeSource Team
  */
-public record DiscoverReplyPayload(List<Api> apis) implements Payload {}
+public record DiscoverReplyPayload(long totalCount) implements Payload {}
