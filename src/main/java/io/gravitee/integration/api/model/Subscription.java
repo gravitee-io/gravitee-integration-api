@@ -31,4 +31,6 @@ public record Subscription(
     Map<String, String> metadata
 ) {
     public static final String METADATA_PLAN_ID = "planId";
+    public static final String METADATA_CONSUMER_KEY = "consumerKey";
+    public static final String METADATA_CONSUMER_SECRET = "consumerSecret";
 }
