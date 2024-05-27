@@ -1,3 +1,10 @@
+# [1.0.0-alpha.13](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.12...1.0.0-alpha.13) (2024-05-27)
+
+
+### Features
+
+* **solace:** add properties used for solace subscription ([#17](https://github.com/gravitee-io/gravitee-integration-api/issues/17)) ([953745f](https://github.com/gravitee-io/gravitee-integration-api/commit/953745f09ef9127d8df9369236853c08f9ab802a))
+
 # [1.0.0-alpha.12](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.11...1.0.0-alpha.12) (2024-05-17)
 
 
