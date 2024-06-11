@@ -1,3 +1,10 @@
+# [1.0.0-alpha.14](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.13...1.0.0-alpha.14) (2024-06-11)
+
+
+### Features
+
+* to distinct validation type by provider let provider plugin select the validation method ([#18](https://github.com/gravitee-io/gravitee-integration-api/issues/18)) ([f34806c](https://github.com/gravitee-io/gravitee-integration-api/commit/f34806c7a09af7fa018c5693abe9d4f538fcf28e))
+
 # [1.0.0-alpha.13](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.12...1.0.0-alpha.13) (2024-05-27)
 
 
