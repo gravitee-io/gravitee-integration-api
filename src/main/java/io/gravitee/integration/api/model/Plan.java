@@ -23,9 +23,4 @@ import lombok.Builder;
  * @author GraviteeSource Team
  */
 @Builder
-public record Plan(String id, String name, String description, PlanSecurityType planSecurityType, Validation validation) {
-    public enum Validation {
-        AUTO,
-        MANUAL,
-    }
-}
+public record Plan(String id, String name, String description, PlanSecurityType planSecurityType) {}
