@@ -1,3 +1,34 @@
+# 1.0.0 (2024-06-17)
+
+
+### Bug Fixes
+
+* define lombok annotation to generate builder and equals methods ([36e275f](https://github.com/gravitee-io/gravitee-integration-api/commit/36e275ffd3cc83589bd21679c5c601c539d4fc0a))
+* remove AbstractIntegrationProviderConfiguration ([a7d3168](https://github.com/gravitee-io/gravitee-integration-api/commit/a7d3168650e54dd7126a39faf17e75b7176c5451))
+* rename OAUTH to OAUTH2 to comply with apim ([#13](https://github.com/gravitee-io/gravitee-integration-api/issues/13)) ([120921b](https://github.com/gravitee-io/gravitee-integration-api/commit/120921bbd9ca025795456f10b68d831a14b19c75))
+* return a result instead of updated subscription when subscribing ([54ec4d7](https://github.com/gravitee-io/gravitee-integration-api/commit/54ec4d74022411e3e0166bf2fe70f8adaee7fc15))
+
+
+### Features
+
+* add Api unique id ([#9](https://github.com/gravitee-io/gravitee-integration-api/issues/9)) ([6c38079](https://github.com/gravitee-io/gravitee-integration-api/commit/6c38079fe2e2b56b22e3f0780f6bd4a22c4cf314))
+* add description to Plan ([c229ced](https://github.com/gravitee-io/gravitee-integration-api/commit/c229ced3510c7fb2f26368b8411fd807a98f26e4))
+* add name in Plan for import ([0de61cd](https://github.com/gravitee-io/gravitee-integration-api/commit/0de61cd45ee905f9146112314b9ab26539fcd62e))
+* add unsubscribe method ([63ba8e8](https://github.com/gravitee-io/gravitee-integration-api/commit/63ba8e800529d61d214a86f7e14214db3b75ce82))
+* change IntegrationProviderFactory signature to rely on Spring env ([2f6f9a3](https://github.com/gravitee-io/gravitee-integration-api/commit/2f6f9a343be796cfa434ba15f6280da81d2382e9))
+* init integration api with commands, model and plugin interface ([d2d7173](https://github.com/gravitee-io/gravitee-integration-api/commit/d2d7173ed03d93ca70123a83da630bd78cd2a644))
+* remove environmentId in HelloPayload ([45f948c](https://github.com/gravitee-io/gravitee-integration-api/commit/45f948c91b970b0b5b9aea71a9e913821ebac0ea))
+* rename element to follow naming used in Federation team ([#7](https://github.com/gravitee-io/gravitee-integration-api/issues/7)) ([cdad394](https://github.com/gravitee-io/gravitee-integration-api/commit/cdad394c5339de39d9e588a9bdd31f8d8e96d4cf))
+* simplify Subscription model ([f3c9351](https://github.com/gravitee-io/gravitee-integration-api/commit/f3c935194be4b711eda2b9da91abfeed86321a6a))
+* **solace:** add properties used for solace subscription ([#17](https://github.com/gravitee-io/gravitee-integration-api/issues/17)) ([953745f](https://github.com/gravitee-io/gravitee-integration-api/commit/953745f09ef9127d8df9369236853c08f9ab802a))
+* to distinct validation type by provider let provider plugin select the validation method ([#18](https://github.com/gravitee-io/gravitee-integration-api/issues/18)) ([f34806c](https://github.com/gravitee-io/gravitee-integration-api/commit/f34806c7a09af7fa018c5693abe9d4f538fcf28e))
+* use gravitee-node Configuration interface ([857f813](https://github.com/gravitee-io/gravitee-integration-api/commit/857f813570bb55c278b6ec9c9b64e88ac9eea4b7))
+
+
+### Reverts
+
+* Revert "feat: to distinct validation type by provider let provider plugin sel…" ([83f660f](https://github.com/gravitee-io/gravitee-integration-api/commit/83f660f76021b875c6997d1f0c7aade9c19c151a))
+
 # [1.0.0-alpha.14](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.13...1.0.0-alpha.14) (2024-06-11)
 
 
