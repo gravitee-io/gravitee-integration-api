@@ -29,7 +29,7 @@
 
     <groupId>io.gravitee.integration</groupId>
     <artifactId>gravitee-integration-api</artifactId>
-    <version>1.0.0-alpha.14</version>
+    <version>1.0.0-alpha.15</version>
     <name>Gravitee.io Integration - API</name>
 
     <properties>

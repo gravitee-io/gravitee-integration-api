@@ -1,3 +1,10 @@
+# [1.0.0-alpha.15](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.14...1.0.0-alpha.15) (2024-06-17)
+
+
+### Reverts
+
+* Revert "feat: to distinct validation type by provider let provider plugin sel…" ([83f660f](https://github.com/gravitee-io/gravitee-integration-api/commit/83f660f76021b875c6997d1f0c7aade9c19c151a))
+
 # [1.0.0-alpha.14](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0-alpha.13...1.0.0-alpha.14) (2024-06-11)
 
 
