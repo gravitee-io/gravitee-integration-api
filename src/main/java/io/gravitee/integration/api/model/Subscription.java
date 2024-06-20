@@ -16,6 +16,7 @@
 
 package io.gravitee.integration.api.model;
 
+import java.io.Serializable;
 import java.util.Map;
 import lombok.Builder;
 
@@ -29,7 +30,8 @@ public record Subscription(
     String graviteeApplicationName,
     SubscriptionType type,
     Map<String, String> metadata
-) {
+)
+    implements Serializable {
     public static final String METADATA_PLAN_ID = "planId";
     public static final String METADATA_CONSUMER_KEY = "consumerKey";
     public static final String METADATA_CONSUMER_SECRET = "consumerSecret";

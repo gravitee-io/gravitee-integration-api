@@ -16,8 +16,10 @@
 
 package io.gravitee.integration.api.model;
 
+import java.io.Serializable;
+
 /**
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
-public record Page(PageType pageType, String content) {}
+public record Page(PageType pageType, String content) implements Serializable {}

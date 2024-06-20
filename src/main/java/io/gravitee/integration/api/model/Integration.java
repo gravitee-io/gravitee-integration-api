@@ -15,6 +15,7 @@
  */
 package io.gravitee.integration.api.model;
 
+import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,7 +29,7 @@ import lombok.NoArgsConstructor;
 @Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
-public class Integration {
+public class Integration implements Serializable {
 
     String id;
     String name;
