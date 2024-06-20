@@ -16,8 +16,9 @@
 
 package io.gravitee.integration.api.model;
 
+import java.io.Serializable;
 import java.util.Map;
 import lombok.Builder;
 
 @Builder
-public record SubscriptionResult(String graviteeSubscriptionId, Map<String, String> metadata, String apiKey) {}
+public record SubscriptionResult(String graviteeSubscriptionId, Map<String, String> metadata, String apiKey) implements Serializable {}
