@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0...1.0.1) (2024-06-20)
+
+
+### Bug Fixes
+
+* make models serializable ([55efcb5](https://github.com/gravitee-io/gravitee-integration-api/commit/55efcb55525ba440bd20d6ff5d20fc08aef8c0a4))
+
 # 1.0.0 (2024-06-17)
 
 
