@@ -27,6 +27,7 @@ import lombok.Builder;
 @Builder
 public record Subscription(
     String graviteeSubscriptionId,
+    String graviteeApplicationId,
     String graviteeApplicationName,
     SubscriptionType type,
     Map<String, String> metadata
