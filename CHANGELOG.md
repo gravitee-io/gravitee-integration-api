@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.1...1.1.0) (2024-07-02)
+
+
+### Features
+
+* add Gravitee Application id in the Subscription model ([98d1753](https://github.com/gravitee-io/gravitee-integration-api/commit/98d175322a40cfd99f593e5595b174e191beef46))
+
 ## [1.0.1](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.0...1.0.1) (2024-06-20)
 
 
