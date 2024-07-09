@@ -31,16 +31,16 @@ import lombok.EqualsAndHashCode;
 public class IngestReply extends IntegrationReply<IngestReplyPayload> {
 
     public IngestReply() {
-        super(IntegrationCommandType.FETCH);
+        super(IntegrationCommandType.INGEST);
     }
 
     public IngestReply(String commandId, String errorDetails) {
-        super(IntegrationCommandType.FETCH, commandId, CommandStatus.ERROR);
+        super(IntegrationCommandType.INGEST, commandId, CommandStatus.ERROR);
         this.errorDetails = errorDetails;
     }
 
     public IngestReply(String commandId, IngestReplyPayload ingestReplyPayload) {
-        super(IntegrationCommandType.FETCH, commandId, CommandStatus.SUCCEEDED);
+        super(IntegrationCommandType.INGEST, commandId, CommandStatus.SUCCEEDED);
         this.payload = ingestReplyPayload;
     }
 }

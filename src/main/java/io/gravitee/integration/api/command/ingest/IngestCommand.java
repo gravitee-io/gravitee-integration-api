@@ -28,7 +28,7 @@ import lombok.EqualsAndHashCode;
 public class IngestCommand extends IntegrationCommand<IngestCommandPayload> {
 
     public IngestCommand() {
-        super(IntegrationCommandType.FETCH);
+        super(IntegrationCommandType.INGEST);
     }
 
     public IngestCommand(final IngestCommandPayload ingestCommandPayload) {
