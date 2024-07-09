@@ -38,27 +38,18 @@ public class IntegrationExchangeSerDe extends DefaultExchangeSerDe {
     public IntegrationExchangeSerDe(final ObjectMapper objectMapper) {
         super(
             objectMapper,
-            Map.of(
-                IntegrationCommandType.HELLO.name(),
-                HelloCommand.class,
-                IntegrationCommandType.FETCH.name(),
-                IngestCommand.class,
-                IntegrationCommandType.LIST.name(),
-                DiscoverCommand.class,
-                IntegrationCommandType.SUBSCRIBE.name(),
-                SubscribeCommand.class,
-                IntegrationCommandType.UNSUBSCRIBE.name(),
-                UnsubscribeCommand.class
+            Map.ofEntries(
+                Map.entry(IntegrationCommandType.HELLO.name(), HelloCommand.class),
+                Map.entry(IntegrationCommandType.DISCOVER.name(), DiscoverCommand.class),
+                Map.entry(IntegrationCommandType.INGEST.name(), IngestCommand.class),
+                Map.entry(IntegrationCommandType.SUBSCRIBE.name(), SubscribeCommand.class),
+                Map.entry(IntegrationCommandType.UNSUBSCRIBE.name(), UnsubscribeCommand.class)
             ),
-            Map.of(
-                IntegrationCommandType.FETCH.name(),
-                IngestReply.class,
-                IntegrationCommandType.LIST.name(),
-                DiscoverReply.class,
-                IntegrationCommandType.SUBSCRIBE.name(),
-                SubscribeReply.class,
-                IntegrationCommandType.UNSUBSCRIBE.name(),
-                UnsubscribeReply.class
+            Map.ofEntries(
+                Map.entry(IntegrationCommandType.DISCOVER.name(), DiscoverReply.class),
+                Map.entry(IntegrationCommandType.INGEST.name(), IngestReply.class),
+                Map.entry(IntegrationCommandType.SUBSCRIBE.name(), SubscribeReply.class),
+                Map.entry(IntegrationCommandType.UNSUBSCRIBE.name(), UnsubscribeReply.class)
             )
         );
     }

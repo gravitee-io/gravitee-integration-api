@@ -29,16 +29,16 @@ import lombok.EqualsAndHashCode;
 public class DiscoverReply extends IntegrationReply<DiscoverReplyPayload> {
 
     public DiscoverReply() {
-        super(IntegrationCommandType.LIST);
+        super(IntegrationCommandType.DISCOVER);
     }
 
     public DiscoverReply(String commandId, String errorDetails) {
-        super(IntegrationCommandType.LIST, commandId, CommandStatus.ERROR);
+        super(IntegrationCommandType.DISCOVER, commandId, CommandStatus.ERROR);
         this.errorDetails = errorDetails;
     }
 
     public DiscoverReply(String commandId, DiscoverReplyPayload discoverReplyPayload) {
-        super(IntegrationCommandType.LIST, commandId, CommandStatus.SUCCEEDED);
+        super(IntegrationCommandType.DISCOVER, commandId, CommandStatus.SUCCEEDED);
         this.payload = discoverReplyPayload;
     }
 }

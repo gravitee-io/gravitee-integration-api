@@ -27,7 +27,7 @@ import lombok.EqualsAndHashCode;
 public class DiscoverCommand extends IntegrationCommand<DiscoverCommandPayload> {
 
     public DiscoverCommand() {
-        super(IntegrationCommandType.LIST);
+        super(IntegrationCommandType.DISCOVER);
         this.payload = new DiscoverCommandPayload();
     }
 }

@@ -20,10 +20,9 @@ package io.gravitee.integration.api.command;
  * @author GraviteeSource Team
  */
 public enum IntegrationCommandType {
-    FETCH,
     HELLO,
-    LIST,
-    STOP,
+    DISCOVER,
+    INGEST,
     SUBSCRIBE,
     UNSUBSCRIBE,
 }
