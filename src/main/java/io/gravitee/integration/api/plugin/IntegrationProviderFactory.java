@@ -16,6 +16,7 @@
 
 package io.gravitee.integration.api.plugin;
 
+import io.gravitee.exchange.api.connector.ExchangeConnectorManager;
 import io.gravitee.node.api.configuration.Configuration;
 
 /**
@@ -26,9 +27,10 @@ public interface IntegrationProviderFactory<I extends IntegrationProvider> {
     /**
      * Create an integration provider using Spring Environment and a Prefix to load the configuration
      * @param id The id of the integration provider.
+     * @param exchangeConnectorManager The ExchangeConnectorManager to get ExchangeConnector.
      * @param environment The Environment where to load the configuration.
      * @param prefix The prefix to use to load the configuration.
      * @return The created integration provider.
      */
-    I createIntegrationProvider(String id, Configuration environment, String prefix);
+    I createIntegrationProvider(String id, ExchangeConnectorManager exchangeConnectorManager, Configuration environment, String prefix);
 }
