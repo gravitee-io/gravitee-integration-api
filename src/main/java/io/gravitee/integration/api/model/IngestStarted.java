@@ -13,17 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.gravitee.integration.api.command;
+package io.gravitee.integration.api.model;
 
 /**
- * @author Guillaume LAMIRAND (guillaume.lamirand at graviteesource.com)
- * @author GraviteeSource Team
+ * Describe a Ingestion job has started
+ * @param ingestJobId The job Id.
+ * @param total The total of APIs expected to be ingested.
  */
-public enum IntegrationCommandType {
-    HELLO,
-    DISCOVER,
-    START_INGEST,
-    INGEST,
-    SUBSCRIBE,
-    UNSUBSCRIBE,
-}
+public record IngestStarted(String ingestJobId, long total) {}

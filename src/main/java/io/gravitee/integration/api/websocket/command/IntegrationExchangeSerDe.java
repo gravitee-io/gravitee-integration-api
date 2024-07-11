@@ -23,6 +23,8 @@ import io.gravitee.integration.api.command.discover.DiscoverReply;
 import io.gravitee.integration.api.command.hello.HelloCommand;
 import io.gravitee.integration.api.command.ingest.IngestCommand;
 import io.gravitee.integration.api.command.ingest.IngestReply;
+import io.gravitee.integration.api.command.ingest.StartIngestCommand;
+import io.gravitee.integration.api.command.ingest.StartIngestReply;
 import io.gravitee.integration.api.command.subscribe.SubscribeCommand;
 import io.gravitee.integration.api.command.subscribe.SubscribeReply;
 import io.gravitee.integration.api.command.unsubscribe.UnsubscribeCommand;
@@ -41,12 +43,14 @@ public class IntegrationExchangeSerDe extends DefaultExchangeSerDe {
             Map.ofEntries(
                 Map.entry(IntegrationCommandType.HELLO.name(), HelloCommand.class),
                 Map.entry(IntegrationCommandType.DISCOVER.name(), DiscoverCommand.class),
+                Map.entry(IntegrationCommandType.START_INGEST.name(), StartIngestCommand.class),
                 Map.entry(IntegrationCommandType.INGEST.name(), IngestCommand.class),
                 Map.entry(IntegrationCommandType.SUBSCRIBE.name(), SubscribeCommand.class),
                 Map.entry(IntegrationCommandType.UNSUBSCRIBE.name(), UnsubscribeCommand.class)
             ),
             Map.ofEntries(
                 Map.entry(IntegrationCommandType.DISCOVER.name(), DiscoverReply.class),
+                Map.entry(IntegrationCommandType.START_INGEST.name(), StartIngestReply.class),
                 Map.entry(IntegrationCommandType.INGEST.name(), IngestReply.class),
                 Map.entry(IntegrationCommandType.SUBSCRIBE.name(), SubscribeReply.class),
                 Map.entry(IntegrationCommandType.UNSUBSCRIBE.name(), UnsubscribeReply.class)

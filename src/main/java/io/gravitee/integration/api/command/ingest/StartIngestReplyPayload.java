@@ -13,17 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.gravitee.integration.api.command;
+
+package io.gravitee.integration.api.command.ingest;
+
+import io.gravitee.exchange.api.command.Payload;
+import lombok.Builder;
 
 /**
- * @author Guillaume LAMIRAND (guillaume.lamirand at graviteesource.com)
- * @author GraviteeSource Team
+ * @param ingestJobId The ingest job id.
+ * @param total The total of APIs that will be ingested.
  */
-public enum IntegrationCommandType {
-    HELLO,
-    DISCOVER,
-    START_INGEST,
-    INGEST,
-    SUBSCRIBE,
-    UNSUBSCRIBE,
-}
+@Builder
+public record StartIngestReplyPayload(String ingestJobId, Long total) implements Payload {}
