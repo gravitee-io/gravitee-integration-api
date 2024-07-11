@@ -13,17 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.gravitee.integration.api.command;
 
-/**
- * @author Guillaume LAMIRAND (guillaume.lamirand at graviteesource.com)
- * @author GraviteeSource Team
- */
-public enum IntegrationCommandType {
-    HELLO,
-    DISCOVER,
-    START_INGEST,
-    INGEST,
-    SUBSCRIBE,
-    UNSUBSCRIBE,
+package io.gravitee.integration.api.command.ingest;
+
+import io.gravitee.integration.api.command.IntegrationCommand;
+import io.gravitee.integration.api.command.IntegrationCommandType;
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode(callSuper = true)
+public class StartIngestCommand extends IntegrationCommand<StartIngestCommandPayload> {
+
+    public StartIngestCommand() {
+        super(IntegrationCommandType.START_INGEST);
+    }
+
+    public StartIngestCommand(final StartIngestCommandPayload ingestCommandPayload) {
+        this();
+        this.payload = ingestCommandPayload;
+    }
 }

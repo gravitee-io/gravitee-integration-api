@@ -18,6 +18,7 @@ package io.gravitee.integration.api.plugin;
 
 import io.gravitee.common.component.LifecycleComponent;
 import io.gravitee.integration.api.model.Api;
+import io.gravitee.integration.api.model.IngestStarted;
 import io.gravitee.integration.api.model.Subscription;
 import io.gravitee.integration.api.model.SubscriptionResult;
 import io.reactivex.rxjava3.core.Completable;
@@ -33,6 +34,8 @@ public interface IntegrationProvider extends LifecycleComponent<IntegrationProvi
     Flowable<Api> discover();
 
     Flowable<Api> ingest(List<Api> apis);
+
+    Single<IngestStarted> startIngest(String ingestJobId, List<Api> apis);
 
     Single<SubscriptionResult> subscribe(String apiId, Subscription subscription);
 
