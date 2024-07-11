@@ -22,8 +22,14 @@ import java.util.List;
 import lombok.Builder;
 
 /**
- * @author Remi Baptiste (remi.baptiste at graviteesource.com)
- * @author GraviteeSource Team
+ * Data structure for the Ingest command.
+ * @param ingestJobId the ID of the ingest job.
+ * @param apis the list of APIs to ingest.
+ * @param done true if no more APIs to ingest after this command.
  */
 @Builder
-public record IngestCommandPayload(List<Api> apis) implements Payload {}
+public record IngestCommandPayload(String ingestJobId, List<Api> apis, boolean done) implements Payload {
+    public IngestCommandPayload(List<Api> apis) {
+        this(null, apis, false);
+    }
+}
