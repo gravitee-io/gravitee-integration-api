@@ -1,3 +1,20 @@
+# [2.0.0](https://github.com/gravitee-io/gravitee-integration-api/compare/1.1.0...2.0.0) (2024-07-18)
+
+
+### Features
+
+* add new command StartIngest ([218bc63](https://github.com/gravitee-io/gravitee-integration-api/commit/218bc63720ae7eacd116894f60971d2370e9aed3))
+* enhance Ingest command to handle an async Ingestion ([0564956](https://github.com/gravitee-io/gravitee-integration-api/commit/05649569b0bb753f1eef8a30df2aadca7521d6da))
+* provide ExchangeConnectorManager when building IntegrationProvider ([f3ec68d](https://github.com/gravitee-io/gravitee-integration-api/commit/f3ec68d7ab3b7cc993ad03fb2209a0c37d64f2c9))
+* remove ingest method from IntegrationProvider ([a3b60f8](https://github.com/gravitee-io/gravitee-integration-api/commit/a3b60f8e24ad08bdd6f33d46a1940b444bd3f8e3))
+
+
+### BREAKING CHANGES
+
+* remove ingest method from IntegrationProvider
+* IntegrationProviderFactory create function has been updated to provide
+the ExchangeConnectorManager
+
 # [1.1.0](https://github.com/gravitee-io/gravitee-integration-api/compare/1.0.1...1.1.0) (2024-07-02)
 
 
