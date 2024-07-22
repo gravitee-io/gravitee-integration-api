@@ -17,6 +17,7 @@
 package io.gravitee.integration.api.model;
 
 import java.io.Serializable;
+import java.util.List;
 import lombok.Builder;
 
 /**
@@ -24,4 +25,9 @@ import lombok.Builder;
  * @author GraviteeSource Team
  */
 @Builder
-public record Plan(String id, String name, String description, PlanSecurityType planSecurityType) implements Serializable {}
+public record Plan(String id, String name, String description, PlanSecurityType planSecurityType, List<String> characteristics)
+    implements Serializable {
+    public Plan(String id, String name, String description, PlanSecurityType planSecurityType) {
+        this(id, name, description, planSecurityType, List.of());
+    }
+}
