@@ -1,3 +1,11 @@
+# [2.1.0](https://github.com/gravitee-io/gravitee-integration-api/compare/2.0.0...2.1.0) (2024-07-22)
+
+
+### Features
+
+* add characteristics to Plan's model ([df152f4](https://github.com/gravitee-io/gravitee-integration-api/commit/df152f42ef218cb6cdb299dcc9055a8b2b100e80))
+* add metadata to Api's model ([a73bb36](https://github.com/gravitee-io/gravitee-integration-api/commit/a73bb36581f958e6f290c72cb0f590dd7776e6a5))
+
 # [2.0.0](https://github.com/gravitee-io/gravitee-integration-api/compare/1.1.0...2.0.0) (2024-07-18)
 
 
