@@ -36,7 +36,7 @@
         <gravitee-bom.version>8.1.0</gravitee-bom.version>
         <gravitee-common.version>4.5.1</gravitee-common.version>
         <gravitee-node.version>5.20.0</gravitee-node.version>
-        <gravitee-exchange.version>1.7.0</gravitee-exchange.version>
+        <gravitee-exchange.version>1.7.2</gravitee-exchange.version>
     </properties>
 
     <dependencyManagement>
