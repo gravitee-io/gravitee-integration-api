@@ -32,7 +32,7 @@ import lombok.NoArgsConstructor;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-@JsonPropertyOrder({ "uniqueId", "id", "name", "version", "description", "connectionDetails", "type", "pages", "plans" })
+@JsonPropertyOrder({ "uniqueId", "id", "name", "version", "description", "connectionDetails", "type", "pages", "plans", "metadata" })
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -48,4 +48,5 @@ public final class Api implements Serializable {
     private ApiType type;
     private List<Page> pages;
     private List<Plan> plans;
+    private List<Metadata> metadata;
 }
