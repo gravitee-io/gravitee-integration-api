@@ -17,12 +17,11 @@
 package io.gravitee.integration.api.model;
 
 import java.io.Serializable;
-import java.util.Map;
 import lombok.Builder;
 
 @Builder
 public record Metadata(String name, String value, Format format) implements Serializable {
-    enum Format {
+    public enum Format {
         STRING,
         NUMERIC,
         BOOLEAN,
