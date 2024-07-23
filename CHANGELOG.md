@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/gravitee-io/gravitee-integration-api/compare/2.1.0...2.1.1) (2024-07-23)
+
+
+### Bug Fixes
+
+* **api-model:** format need to be public ([#29](https://github.com/gravitee-io/gravitee-integration-api/issues/29)) ([babee1a](https://github.com/gravitee-io/gravitee-integration-api/commit/babee1a89bad5484f36c3e297cedb98c6dc7b292))
+
 # [2.1.0](https://github.com/gravitee-io/gravitee-integration-api/compare/2.0.0...2.1.0) (2024-07-22)
 
 
