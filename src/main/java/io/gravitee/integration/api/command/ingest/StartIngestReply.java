@@ -17,6 +17,7 @@
 package io.gravitee.integration.api.command.ingest;
 
 import io.gravitee.exchange.api.command.CommandStatus;
+import io.gravitee.exchange.api.command.Payload;
 import io.gravitee.integration.api.command.IntegrationCommandType;
 import io.gravitee.integration.api.command.IntegrationReply;
 import lombok.Builder;
@@ -24,7 +25,7 @@ import lombok.EqualsAndHashCode;
 
 @Builder
 @EqualsAndHashCode(callSuper = true)
-public class StartIngestReply extends IntegrationReply<StartIngestReplyPayload> {
+public class StartIngestReply extends IntegrationReply<StartIngestReply.Payload> {
 
     public StartIngestReply() {
         super(IntegrationCommandType.START_INGEST);
@@ -35,8 +36,19 @@ public class StartIngestReply extends IntegrationReply<StartIngestReplyPayload> 
         this.errorDetails = errorDetails;
     }
 
-    public StartIngestReply(String commandId, StartIngestReplyPayload ingestReplyPayload) {
+    public StartIngestReply(String commandId, Payload ingestReplyPayload) {
         super(IntegrationCommandType.START_INGEST, commandId, CommandStatus.SUCCEEDED);
         this.payload = ingestReplyPayload;
     }
+
+    public StartIngestReply(String commandId, String ingestJobId, Long total) {
+        this(commandId, new Payload(ingestJobId, total));
+    }
+
+    /**
+     * @param ingestJobId The ingest job id.
+     * @param total The total of APIs that will be ingested.
+     */
+    @Builder
+    public record Payload(String ingestJobId, Long total) implements io.gravitee.exchange.api.command.Payload {}
 }

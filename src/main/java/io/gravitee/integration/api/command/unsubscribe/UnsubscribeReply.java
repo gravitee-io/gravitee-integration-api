@@ -16,12 +16,13 @@
 package io.gravitee.integration.api.command.unsubscribe;
 
 import io.gravitee.exchange.api.command.CommandStatus;
+import io.gravitee.exchange.api.command.Payload;
 import io.gravitee.integration.api.command.IntegrationCommandType;
 import io.gravitee.integration.api.command.IntegrationReply;
 import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
-public class UnsubscribeReply extends IntegrationReply<UnsubscribeReplyPayload> {
+public class UnsubscribeReply extends IntegrationReply<UnsubscribeReply.Payload> {
 
     public UnsubscribeReply() {
         super(IntegrationCommandType.UNSUBSCRIBE);
@@ -32,8 +33,10 @@ public class UnsubscribeReply extends IntegrationReply<UnsubscribeReplyPayload> 
         this.errorDetails = errorDetails;
     }
 
-    public UnsubscribeReply(String commandId, UnsubscribeReplyPayload payload) {
+    public UnsubscribeReply(String commandId) {
         super(IntegrationCommandType.UNSUBSCRIBE, commandId, CommandStatus.SUCCEEDED);
-        this.payload = payload;
+        this.payload = new Payload();
     }
+
+    public record Payload() implements io.gravitee.exchange.api.command.Payload {}
 }
