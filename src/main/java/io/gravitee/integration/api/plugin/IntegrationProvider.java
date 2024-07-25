@@ -33,7 +33,7 @@ import java.util.List;
 public interface IntegrationProvider extends LifecycleComponent<IntegrationProvider> {
     Flowable<Api> discover();
 
-    Single<IngestStarted> startIngest(String ingestJobId, List<String> apis);
+    Single<IngestStarted> startIngest(String ingestJobId, List<String> apiIds);
 
     Single<SubscriptionResult> subscribe(String apiId, Subscription subscription);
 
