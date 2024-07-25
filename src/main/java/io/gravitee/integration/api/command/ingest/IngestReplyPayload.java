@@ -14,21 +14,17 @@
  * limitations under the License.
  */
 
-package io.gravitee.integration.api.command.unsubscribe;
+package io.gravitee.integration.api.command.ingest;
 
-import io.gravitee.integration.api.command.IntegrationCommand;
-import io.gravitee.integration.api.command.IntegrationCommandType;
-import lombok.EqualsAndHashCode;
+import io.gravitee.exchange.api.command.Payload;
+import io.gravitee.integration.api.model.Api;
+import java.util.List;
+import lombok.Builder;
+import lombok.Singular;
 
-@EqualsAndHashCode(callSuper = true)
-public class UnsubscribeCommand extends IntegrationCommand<UnsubscribeCommandPayload> {
-
-    public UnsubscribeCommand() {
-        super(IntegrationCommandType.UNSUBSCRIBE);
-    }
-
-    public UnsubscribeCommand(final UnsubscribeCommandPayload unsubscribeCommandPayload) {
-        this();
-        this.payload = unsubscribeCommandPayload;
-    }
-}
+/**
+ * @author Guillaume LAMIRAND (guillaume.lamirand at graviteesource.com)
+ * @author GraviteeSource Team
+ */
+@Builder
+public record IngestReplyPayload(@Singular("api") List<Api> apis) implements Payload {}

@@ -13,22 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package io.gravitee.integration.api.command.discover;
 
-package io.gravitee.integration.api.command.unsubscribe;
+import io.gravitee.exchange.api.command.Payload;
+import io.gravitee.integration.api.model.Api;
+import java.util.List;
 
-import io.gravitee.integration.api.command.IntegrationCommand;
-import io.gravitee.integration.api.command.IntegrationCommandType;
-import lombok.EqualsAndHashCode;
-
-@EqualsAndHashCode(callSuper = true)
-public class UnsubscribeCommand extends IntegrationCommand<UnsubscribeCommandPayload> {
-
-    public UnsubscribeCommand() {
-        super(IntegrationCommandType.UNSUBSCRIBE);
-    }
-
-    public UnsubscribeCommand(final UnsubscribeCommandPayload unsubscribeCommandPayload) {
-        this();
-        this.payload = unsubscribeCommandPayload;
-    }
-}
+/**
+ * @author Guillaume LAMIRAND (guillaume.lamirand at graviteesource.com)
+ * @author GraviteeSource Team
+ */
+public record DiscoverReplyPayload(List<Api> apis) implements Payload {}

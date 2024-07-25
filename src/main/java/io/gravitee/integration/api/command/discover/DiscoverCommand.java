@@ -15,7 +15,6 @@
  */
 package io.gravitee.integration.api.command.discover;
 
-import io.gravitee.exchange.api.command.Payload;
 import io.gravitee.integration.api.command.IntegrationCommand;
 import io.gravitee.integration.api.command.IntegrationCommandType;
 import lombok.EqualsAndHashCode;
@@ -25,12 +24,10 @@ import lombok.EqualsAndHashCode;
  * @author GraviteeSource Team
  */
 @EqualsAndHashCode(callSuper = true)
-public class DiscoverCommand extends IntegrationCommand<DiscoverCommand.Payload> {
+public class DiscoverCommand extends IntegrationCommand<DiscoverCommandPayload> {
 
     public DiscoverCommand() {
         super(IntegrationCommandType.DISCOVER);
-        this.payload = new Payload();
+        this.payload = new DiscoverCommandPayload();
     }
-
-    public record Payload() implements io.gravitee.exchange.api.command.Payload {}
 }

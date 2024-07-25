@@ -28,7 +28,7 @@ import lombok.EqualsAndHashCode;
  */
 @Builder
 @EqualsAndHashCode(callSuper = true)
-public class IngestReply extends IntegrationReply<IngestReply.Payload> {
+public class IngestReply extends IntegrationReply<IngestReplyPayload> {
 
     public IngestReply() {
         super(IntegrationCommandType.INGEST);
@@ -39,14 +39,8 @@ public class IngestReply extends IntegrationReply<IngestReply.Payload> {
         this.errorDetails = errorDetails;
     }
 
-    public IngestReply(String commandId, IngestReply.Payload ingestReplyPayload) {
+    public IngestReply(String commandId, IngestReplyPayload ingestReplyPayload) {
         super(IntegrationCommandType.INGEST, commandId, CommandStatus.SUCCEEDED);
         this.payload = ingestReplyPayload;
     }
-
-    public IngestReply(String commandId) {
-        this(commandId, new Payload());
-    }
-
-    public record Payload() implements io.gravitee.exchange.api.command.Payload {}
 }

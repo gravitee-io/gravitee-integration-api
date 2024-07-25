@@ -16,11 +16,8 @@
 package io.gravitee.integration.api.command.discover;
 
 import io.gravitee.exchange.api.command.CommandStatus;
-import io.gravitee.exchange.api.command.Payload;
 import io.gravitee.integration.api.command.IntegrationCommandType;
 import io.gravitee.integration.api.command.IntegrationReply;
-import io.gravitee.integration.api.model.Api;
-import java.util.List;
 import lombok.EqualsAndHashCode;
 
 /**
@@ -29,7 +26,7 @@ import lombok.EqualsAndHashCode;
  */
 
 @EqualsAndHashCode(callSuper = true)
-public class DiscoverReply extends IntegrationReply<DiscoverReply.Payload> {
+public class DiscoverReply extends IntegrationReply<DiscoverReplyPayload> {
 
     public DiscoverReply() {
         super(IntegrationCommandType.DISCOVER);
@@ -40,14 +37,8 @@ public class DiscoverReply extends IntegrationReply<DiscoverReply.Payload> {
         this.errorDetails = errorDetails;
     }
 
-    public DiscoverReply(String commandId, DiscoverReply.Payload discoverReplyPayload) {
+    public DiscoverReply(String commandId, DiscoverReplyPayload discoverReplyPayload) {
         super(IntegrationCommandType.DISCOVER, commandId, CommandStatus.SUCCEEDED);
         this.payload = discoverReplyPayload;
     }
-
-    public DiscoverReply(String commandId, List<Api> apis) {
-        this(commandId, new Payload(apis));
-    }
-
-    public record Payload(List<Api> apis) implements io.gravitee.exchange.api.command.Payload {}
 }

@@ -16,19 +16,6 @@
 
 package io.gravitee.integration.api.command.unsubscribe;
 
-import io.gravitee.integration.api.command.IntegrationCommand;
-import io.gravitee.integration.api.command.IntegrationCommandType;
-import lombok.EqualsAndHashCode;
+import io.gravitee.exchange.api.command.Payload;
 
-@EqualsAndHashCode(callSuper = true)
-public class UnsubscribeCommand extends IntegrationCommand<UnsubscribeCommandPayload> {
-
-    public UnsubscribeCommand() {
-        super(IntegrationCommandType.UNSUBSCRIBE);
-    }
-
-    public UnsubscribeCommand(final UnsubscribeCommandPayload unsubscribeCommandPayload) {
-        this();
-        this.payload = unsubscribeCommandPayload;
-    }
-}
+public record UnsubscribeReplyPayload() implements Payload {}

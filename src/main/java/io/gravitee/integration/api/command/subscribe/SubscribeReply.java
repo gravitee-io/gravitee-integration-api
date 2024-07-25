@@ -16,10 +16,8 @@
 package io.gravitee.integration.api.command.subscribe;
 
 import io.gravitee.exchange.api.command.CommandStatus;
-import io.gravitee.exchange.api.command.Payload;
 import io.gravitee.integration.api.command.IntegrationCommandType;
 import io.gravitee.integration.api.command.IntegrationReply;
-import io.gravitee.integration.api.model.SubscriptionResult;
 import lombok.EqualsAndHashCode;
 
 /**
@@ -27,7 +25,7 @@ import lombok.EqualsAndHashCode;
  * @author GraviteeSource Team
  */
 @EqualsAndHashCode(callSuper = true)
-public class SubscribeReply extends IntegrationReply<SubscribeReply.Payload> {
+public class SubscribeReply extends IntegrationReply<SubscribeReplyPayload> {
 
     public SubscribeReply() {
         super(IntegrationCommandType.SUBSCRIBE);
@@ -38,14 +36,8 @@ public class SubscribeReply extends IntegrationReply<SubscribeReply.Payload> {
         this.errorDetails = errorDetails;
     }
 
-    public SubscribeReply(String commandId, SubscribeReply.Payload subscribeReplyPayload) {
+    public SubscribeReply(String commandId, SubscribeReplyPayload subscribeReplyPayload) {
         super(IntegrationCommandType.SUBSCRIBE, commandId, CommandStatus.SUCCEEDED);
         this.payload = subscribeReplyPayload;
     }
-
-    public SubscribeReply(String commandId, SubscriptionResult subscription) {
-        this(commandId, new Payload(subscription));
-    }
-
-    public record Payload(SubscriptionResult subscription) implements io.gravitee.exchange.api.command.Payload {}
 }
