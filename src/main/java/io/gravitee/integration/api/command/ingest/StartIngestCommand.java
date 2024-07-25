@@ -19,8 +19,6 @@ package io.gravitee.integration.api.command.ingest;
 import io.gravitee.integration.api.command.IntegrationCommand;
 import io.gravitee.integration.api.command.IntegrationCommandType;
 import java.util.List;
-
-import io.gravitee.integration.api.model.Api;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Singular;
@@ -37,10 +35,10 @@ public class StartIngestCommand extends IntegrationCommand<StartIngestCommand.Pa
         this.payload = ingestCommandPayload;
     }
 
-    public StartIngestCommand(String ingestJobId, List<Api> apis) {
+    public StartIngestCommand(String ingestJobId, List<String> apis) {
         this(new Payload(ingestJobId, apis));
     }
 
     @Builder
-    public record Payload(String ingestJobId, @Singular("api") List<Api> apis) implements io.gravitee.exchange.api.command.Payload {}
+    public record Payload(String ingestJobId, @Singular("api") List<String> apis) implements io.gravitee.exchange.api.command.Payload {}
 }
