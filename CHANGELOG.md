@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/gravitee-io/gravitee-integration-api/compare/2.1.1...3.0.0) (2024-07-25)
+
+
+* feat(ingest)!: use APIs ids during ingest ([1542218](https://github.com/gravitee-io/gravitee-integration-api/commit/1542218764df8f64259fef71c0ccf28a9233726c))
+* feat!: move payload of command inside command ([31913dd](https://github.com/gravitee-io/gravitee-integration-api/commit/31913dd4e23c8f6b6ccb2dafe1fa5fbdf9b0e993))
+
+
+### BREAKING CHANGES
+
+* signature of start ingest is changed
+* construction of commands are little differents
+
 ## [2.1.1](https://github.com/gravitee-io/gravitee-integration-api/compare/2.1.0...2.1.1) (2024-07-23)
 
 
