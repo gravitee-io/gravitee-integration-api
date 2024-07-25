@@ -16,8 +16,12 @@
 
 package io.gravitee.integration.api.command.ingest;
 
+import io.gravitee.exchange.api.command.Payload;
 import io.gravitee.integration.api.command.IntegrationCommand;
 import io.gravitee.integration.api.command.IntegrationCommandType;
+import io.gravitee.integration.api.model.Api;
+import java.util.List;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 
 /**
@@ -25,14 +29,31 @@ import lombok.EqualsAndHashCode;
  * @author GraviteeSource Team
  */
 @EqualsAndHashCode(callSuper = true)
-public class IngestCommand extends IntegrationCommand<IngestCommandPayload> {
+public class IngestCommand extends IntegrationCommand<IngestCommand.Payload> {
 
     public IngestCommand() {
         super(IntegrationCommandType.INGEST);
     }
 
-    public IngestCommand(final IngestCommandPayload ingestCommandPayload) {
+    public IngestCommand(final IngestCommand.Payload ingestCommandPayload) {
         this();
         this.payload = ingestCommandPayload;
+    }
+
+    public IngestCommand(String ingestJobId, List<Api> apis, boolean done) {
+        this(new Payload(ingestJobId, apis, done));
+    }
+
+    /**
+     * Data structure for the Ingest command.
+     * @param ingestJobId the ID of the ingest job.
+     * @param apis the list of APIs to ingest.
+     * @param done true if no more APIs to ingest after this command.
+     */
+    @Builder
+    public record Payload(String ingestJobId, List<Api> apis, boolean done) implements io.gravitee.exchange.api.command.Payload {
+        public Payload(List<Api> apis) {
+            this(null, apis, false);
+        }
     }
 }

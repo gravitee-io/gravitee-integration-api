@@ -16,19 +16,27 @@
 
 package io.gravitee.integration.api.command.unsubscribe;
 
+import io.gravitee.exchange.api.command.Payload;
 import io.gravitee.integration.api.command.IntegrationCommand;
 import io.gravitee.integration.api.command.IntegrationCommandType;
+import io.gravitee.integration.api.model.Subscription;
 import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
-public class UnsubscribeCommand extends IntegrationCommand<UnsubscribeCommandPayload> {
+public class UnsubscribeCommand extends IntegrationCommand<UnsubscribeCommand.Payload> {
 
     public UnsubscribeCommand() {
         super(IntegrationCommandType.UNSUBSCRIBE);
     }
 
-    public UnsubscribeCommand(final UnsubscribeCommandPayload unsubscribeCommandPayload) {
+    public UnsubscribeCommand(final UnsubscribeCommand.Payload unsubscribeCommandPayload) {
         this();
         this.payload = unsubscribeCommandPayload;
     }
+
+    public UnsubscribeCommand(String apiId, Subscription subscription) {
+        this(new Payload(apiId, subscription));
+    }
+
+    public record Payload(String apiId, Subscription subscription) implements io.gravitee.exchange.api.command.Payload {}
 }
