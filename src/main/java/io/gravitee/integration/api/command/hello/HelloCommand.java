@@ -18,20 +18,40 @@ package io.gravitee.integration.api.command.hello;
 
 import io.gravitee.integration.api.command.IntegrationCommand;
 import io.gravitee.integration.api.command.IntegrationCommandType;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
-public class HelloCommand extends IntegrationCommand<HelloCommandPayload> {
+public class HelloCommand extends IntegrationCommand<HelloCommand.Payload> {
 
     public HelloCommand() {
         super(IntegrationCommandType.HELLO);
     }
 
-    public HelloCommand(final String originalCommandId, final HelloCommandPayload helloCommandPayload) {
+    public HelloCommand(final String originalCommandId, final HelloCommand.Payload helloCommandPayload) {
         this();
         this.id = originalCommandId;
         this.payload = helloCommandPayload;
+    }
+
+    public HelloCommand(final String originalCommandId, final String targetId, final String provider) {
+        this();
+        this.id = originalCommandId;
+        this.payload = new Payload(targetId, provider);
+    }
+
+    @Getter
+    @Setter
+    public static class Payload extends io.gravitee.exchange.api.command.hello.HelloCommandPayload {
+
+        private String provider;
+
+        public Payload(final String targetId, final String provider) {
+            super(targetId);
+            this.provider = provider;
+        }
     }
 }

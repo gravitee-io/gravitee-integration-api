@@ -18,17 +18,27 @@ package io.gravitee.integration.api.command.ingest;
 
 import io.gravitee.integration.api.command.IntegrationCommand;
 import io.gravitee.integration.api.command.IntegrationCommandType;
+import java.util.List;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
+import lombok.Singular;
 
 @EqualsAndHashCode(callSuper = true)
-public class StartIngestCommand extends IntegrationCommand<StartIngestCommandPayload> {
+public class StartIngestCommand extends IntegrationCommand<StartIngestCommand.Payload> {
 
     public StartIngestCommand() {
         super(IntegrationCommandType.START_INGEST);
     }
 
-    public StartIngestCommand(final StartIngestCommandPayload ingestCommandPayload) {
+    public StartIngestCommand(final StartIngestCommand.Payload ingestCommandPayload) {
         this();
         this.payload = ingestCommandPayload;
     }
+
+    public StartIngestCommand(String ingestJobId, List<String> apis) {
+        this(new Payload(ingestJobId, apis));
+    }
+
+    @Builder
+    public record Payload(String ingestJobId, @Singular("apiId") List<String> apiIds) implements io.gravitee.exchange.api.command.Payload {}
 }
