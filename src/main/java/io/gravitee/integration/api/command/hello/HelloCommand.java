@@ -19,6 +19,7 @@ package io.gravitee.integration.api.command.hello;
 import io.gravitee.integration.api.command.IntegrationCommand;
 import io.gravitee.integration.api.command.IntegrationCommandType;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
@@ -45,6 +46,7 @@ public class HelloCommand extends IntegrationCommand<HelloCommand.Payload> {
 
     @Getter
     @Setter
+    @NoArgsConstructor
     public static class Payload extends io.gravitee.exchange.api.command.hello.HelloCommandPayload {
 
         private String provider;
