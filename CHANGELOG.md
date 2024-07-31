@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/gravitee-io/gravitee-integration-api/compare/4.0.0...4.0.1) (2024-07-31)
+
+
+### Bug Fixes
+
+* **hello:** fix deserialization ([#33](https://github.com/gravitee-io/gravitee-integration-api/issues/33)) ([0cddad9](https://github.com/gravitee-io/gravitee-integration-api/commit/0cddad959d107de3ae6f1cf7929d97358a8d4ce3))
+
 # [4.0.0](https://github.com/gravitee-io/gravitee-integration-api/compare/3.0.0...4.0.0) (2024-07-30)
 
 
