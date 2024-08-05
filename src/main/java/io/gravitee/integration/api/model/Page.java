@@ -22,4 +22,4 @@ import java.io.Serializable;
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
-public record Page(PageType pageType, String content) implements Serializable {}
+public record Page(PageType pageType, String content, String filename) implements Serializable {}
