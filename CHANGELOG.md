@@ -1,3 +1,10 @@
+# [4.1.0](https://github.com/gravitee-io/gravitee-integration-api/compare/4.0.1...4.1.0) (2024-08-05)
+
+
+### Features
+
+* **page:** allow to set filename of page (optional) ([#34](https://github.com/gravitee-io/gravitee-integration-api/issues/34)) ([0a5710e](https://github.com/gravitee-io/gravitee-integration-api/commit/0a5710e191895b25f4d3161c516a1e3509f750dd))
+
 ## [4.0.1](https://github.com/gravitee-io/gravitee-integration-api/compare/4.0.0...4.0.1) (2024-07-31)
 
 
