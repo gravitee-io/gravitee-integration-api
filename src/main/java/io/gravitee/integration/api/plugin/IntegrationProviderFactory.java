@@ -19,7 +19,14 @@ package io.gravitee.integration.api.plugin;
 import io.gravitee.node.api.configuration.Configuration;
 
 /**
- * Instances of this interfaces will be autowired in after construction. Injection can be done by setter but not by constructor.
+ * Instances of this interfaces will be autowired in after construction. Injection can be done by setter but not by constructor.</br>
+ * To get {@link io.gravitee.exchange.api.connector.ExchangeConnectorManager} your implementation can do
+ * <pre>
+ *   {@literal @}Autowired
+ *    public void setExchangeConnectorManager(ExchangeConnectorManager exchangeConnectorManager) {
+ *        this.exchangeConnectorManager = exchangeConnectorManager;
+ *    }
+ * </pre>
  * @author Remi Baptiste (remi.baptiste at graviteesource.com)
  * @author GraviteeSource Team
  */
