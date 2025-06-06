@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/gravitee-io/gravitee-integration-api/compare/4.1.0...5.0.0) (2025-06-06)
+
+
+* feat!: add documentation & trigger release ([55a8973](https://github.com/gravitee-io/gravitee-integration-api/commit/55a89739ca5daaab5f9243c8e913e0656f104c04))
+
+
+### BREAKING CHANGES
+
+* ref 01f625cc06b74b1125a49b0a3b27486080e0b102
+
+APIM-9548
+
 # [4.1.0](https://github.com/gravitee-io/gravitee-integration-api/compare/4.0.1...4.1.0) (2024-08-05)
 
 
