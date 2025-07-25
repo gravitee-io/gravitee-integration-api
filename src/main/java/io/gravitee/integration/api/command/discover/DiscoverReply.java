@@ -16,7 +16,6 @@
 package io.gravitee.integration.api.command.discover;
 
 import io.gravitee.exchange.api.command.CommandStatus;
-import io.gravitee.exchange.api.command.Payload;
 import io.gravitee.integration.api.command.IntegrationCommandType;
 import io.gravitee.integration.api.command.IntegrationReply;
 import io.gravitee.integration.api.model.Api;
@@ -46,8 +45,12 @@ public class DiscoverReply extends IntegrationReply<DiscoverReply.Payload> {
     }
 
     public DiscoverReply(String commandId, List<Api> apis) {
-        this(commandId, new Payload(apis));
+        this(commandId, new Payload(apis, false));
     }
 
-    public record Payload(List<Api> apis) implements io.gravitee.exchange.api.command.Payload {}
+    public DiscoverReply(String commandId, List<Api> apis, boolean isPartialDiscovery) {
+        this(commandId, new Payload(apis, isPartialDiscovery));
+    }
+
+    public record Payload(List<Api> apis, boolean isPartialDiscovery) implements io.gravitee.exchange.api.command.Payload {}
 }
