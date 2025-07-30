@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/gravitee-io/gravitee-integration-api/compare/5.0.0...5.1.0) (2025-07-30)
+
+
+### Features
+
+* add support for partial discovery in the ` DiscoverReply ` command ([ac5d15b](https://github.com/gravitee-io/gravitee-integration-api/commit/ac5d15b07a472089bd38bc8a16d45d1f9bcca465))
+
 # [5.0.0](https://github.com/gravitee-io/gravitee-integration-api/compare/4.1.0...5.0.0) (2025-06-06)
 
 
