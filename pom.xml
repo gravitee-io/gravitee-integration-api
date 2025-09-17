@@ -33,7 +33,7 @@
     <name>Gravitee.io Integration - API</name>
 
     <properties>
-        <gravitee-bom.version>8.3.41</gravitee-bom.version>
+        <gravitee-bom.version>8.3.42</gravitee-bom.version>
         <gravitee-common.version>4.7.0</gravitee-common.version>
         <gravitee-node.version>7.11.1</gravitee-node.version>
         <gravitee-exchange.version>1.9.0</gravitee-exchange.version>
