@@ -31,8 +31,7 @@ public record Subscription(
     String graviteeApplicationName,
     SubscriptionType type,
     Map<String, String> metadata
-)
-    implements Serializable {
+) implements Serializable {
     public static final String METADATA_PLAN_ID = "planId";
     public static final String METADATA_CONSUMER_KEY = "consumerKey";
     public static final String METADATA_CONSUMER_SECRET = "consumerSecret";

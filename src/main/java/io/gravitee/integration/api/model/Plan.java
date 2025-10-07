@@ -25,8 +25,8 @@ import lombok.Builder;
  * @author GraviteeSource Team
  */
 @Builder
-public record Plan(String id, String name, String description, PlanSecurityType planSecurityType, List<String> characteristics)
-    implements Serializable {
+public record Plan(String id, String name, String description, PlanSecurityType planSecurityType, List<String> characteristics) implements
+    Serializable {
     public Plan(String id, String name, String description, PlanSecurityType planSecurityType) {
         this(id, name, description, planSecurityType, List.of());
     }
