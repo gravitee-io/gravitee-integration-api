@@ -1,3 +1,15 @@
+# [6.0.0](https://github.com/gravitee-io/gravitee-integration-api/compare/5.1.0...6.0.0) (2025-10-10)
+
+
+### chore
+
+* bump some deps ([3862da2](https://github.com/gravitee-io/gravitee-integration-api/commit/3862da2b4a8ba65ecf4cbe8760098a4d6919b55b))
+
+
+### BREAKING CHANGES
+
+* openjdk 21 requiered
+
 # [5.1.0](https://github.com/gravitee-io/gravitee-integration-api/compare/5.0.0...5.1.0) (2025-07-30)
 
 
