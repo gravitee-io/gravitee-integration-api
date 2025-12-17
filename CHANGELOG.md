@@ -1,3 +1,10 @@
+## [6.0.1](https://github.com/gravitee-io/gravitee-integration-api/compare/6.0.0...6.0.1) (2025-12-17)
+
+
+### Bug Fixes
+
+* **deps:** update gravitee-exchange version ([bcccc01](https://github.com/gravitee-io/gravitee-integration-api/commit/bcccc01cbc8619efa1462501884f0fdaf044aa69))
+
 # [6.0.0](https://github.com/gravitee-io/gravitee-integration-api/compare/5.1.0...6.0.0) (2025-10-10)
 
 
